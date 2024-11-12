@@ -4,7 +4,7 @@ file (GLOB_RECURSE SRCS . *.cpp)
 #     ${SRCS}
 # )
 
-add_library(my_dep
+add_library(${PROJECT_NAME}
     ${SRCS}
 )
 
@@ -16,9 +16,7 @@ add_executable(main
     main.cpp
 )
 
-target_link_libraries(my_dep
-   # Add libraries here
-   ${PROJECT_NAME}
+target_link_libraries(${PROJECT_NAME}
    ${EXTERNAL_LIBRARIES}
 )
 
@@ -28,7 +26,7 @@ install(FILES my_dep.h
 )
 
 # Install the library which can be linked here
-install(TARGETS my_dep EXPORT my_dep-targets
+install(TARGETS ${PROJECT_NAME} EXPORT my_dep-targets
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
     RUNTIME DESTINATION bin
