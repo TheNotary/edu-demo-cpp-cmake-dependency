@@ -13,4 +13,4 @@ link_directories (${PROJECT_BINARY_DIR}/ext/lib)
 
 add_subdirectory (ext)
 add_subdirectory (src)
-#add_subdirectory (test)
+add_subdirectory (test)

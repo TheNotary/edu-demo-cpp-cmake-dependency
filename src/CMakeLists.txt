@@ -1,14 +1,11 @@
 file (GLOB_RECURSE SRCS . *.cpp)
 
-# add_library(${PROJECT_NAME}
-#     ${SRCS}
-# )
-
 add_library(${PROJECT_NAME}
     ${SRCS}
 )
 
-#add_dependencies(${PROJECT_NAME} ${EXTERNAL_PROJECTS} ${EXTERNAL_TEST_PROJECTS})
+# If any EXTERNAL_PROJECTS
+add_dependencies(${PROJECT_NAME} ${EXTERNAL_PROJECTS} ${EXTERNAL_TEST_PROJECTS})
 
 # This can be removed, but creates a demo executable called main
 add_executable(main
