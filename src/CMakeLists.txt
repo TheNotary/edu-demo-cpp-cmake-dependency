@@ -6,11 +6,11 @@ add_library(${PROJECT_NAME}
 
 #add_dependencies(${PROJECT_NAME} ${EXTERNAL_PROJECTS} ${EXTERNAL_TEST_PROJECTS})
 
-add_executable(main
+add_executable(my_dep
     main.cpp
 )
 
-target_link_libraries(main
+target_link_libraries(my_dep
    # Add libraries here
    ${PROJECT_NAME}
    ${EXTERNAL_LIBRARIES}
@@ -18,4 +18,4 @@ target_link_libraries(main
 
 # This might be required
 install(FILES my_dep.h DESTINATION include/my_dep)
-install(TARGETS main EXPORT my_dep-targets DESTINATION lib)
+install(TARGETS my_dep EXPORT my_dep-targets DESTINATION lib)
