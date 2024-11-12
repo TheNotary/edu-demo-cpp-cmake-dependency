@@ -1,12 +1,17 @@
 file (GLOB_RECURSE SRCS . *.cpp)
 
-add_library(${PROJECT_NAME}
+# add_library(${PROJECT_NAME}
+#     ${SRCS}
+# )
+
+add_library(my_dep
     ${SRCS}
 )
 
 #add_dependencies(${PROJECT_NAME} ${EXTERNAL_PROJECTS} ${EXTERNAL_TEST_PROJECTS})
 
-add_executable(my_dep
+add_executable(main
+    my_dep.cpp
     main.cpp
 )
 
