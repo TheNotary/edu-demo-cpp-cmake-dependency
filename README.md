@@ -4,6 +4,14 @@ This repo is holds the dependency consumed by the sister-demo repo, https://gith
 
 
 
+#### Deploy
+
+```
+git tag -a v1.0.0 -m "v1.0.0"
+git push --tags
+```
+
+
 #### Build
 
 The consumer will automatically build this repo, but to do so manually...
