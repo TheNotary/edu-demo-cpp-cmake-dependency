@@ -17,5 +17,5 @@ target_link_libraries(main
 )
 
 # This might be required
-# install(FILES my_dep.h DESTINATION include/my_dep)
-# install(TARGETS my_dep EXPORT my_dep-targets DESTINATION lib)
+install(FILES my_dep.h DESTINATION include/my_dep)
+install(TARGETS main EXPORT my_dep-targets DESTINATION lib)
