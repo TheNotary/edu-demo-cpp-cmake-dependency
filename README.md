@@ -19,7 +19,7 @@ The consumer will automatically build this repo, but to do so manually...
 ```
 cd build
 cmake ..
-make -j 8
+cmake --build .
 
 ./src/main
 ```
